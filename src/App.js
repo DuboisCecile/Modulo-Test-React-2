@@ -1,4 +1,8 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.min.css';
+import './index.css';
 
 import Main from './Main';
 import Header from './components/Header';
@@ -11,6 +15,11 @@ export default function App() {
         <Header />
         <Main />
       </BasketContextProvider>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        theme="colored"
+      />
     </div>
   );
 }

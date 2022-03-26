@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 import { BasketContext } from '../contexts/BasketContext';
 
@@ -10,10 +11,12 @@ export default function Basket() {
     e.preventDefault();
     const quantity = parseInt(e.target.value, 10);
     changeQuantity(quantity, id);
+    toast.success('Panier mis à jour !');
   };
 
   const deleteProduct = (e, id) => {
     setBasketItems(basketItems.filter((product) => product.id !== id));
+    toast.success('Produit supprimé !');
   };
 
   return (
