@@ -68,7 +68,7 @@ export default function Header() {
               >
                 <FontAwesomeIcon className="text-4xl" icon={faShoppingBasket} />
 
-                <div className="ml-2 text-xl text-white px-2 bg-red-400 rounded-full flex justify-center items-center leading-snug align-middle">
+                <div className="ml-2 text-2xl text-white px-2 py-1 bg-red-400 rounded-full flex justify-center items-center">
                   {basketItems?.length}
                 </div>
               </NavLink>
